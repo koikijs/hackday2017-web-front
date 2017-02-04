@@ -1,0 +1,28 @@
+.windows {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100vw;
+  height: 100vh;
+}
+
+.windows-frame {
+  flex-basis: 20vw;
+  border: 20px solid rgb(84, 81, 81);
+}
+
+.windows-frame.center{
+  flex-basis: 60vw;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+video {
+	position: fixed;
+	top: 0;
+	left: 0;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -1;
+}
