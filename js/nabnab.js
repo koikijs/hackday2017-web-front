@@ -20,7 +20,7 @@
       isOpen = false;
       video.className = 'video deactive';
     }
-    if (type === 'ambient'  && value < 100) {
+    if (type === 'ambient' && isOpen && value < 100) {
       video.style.filter = 'brightness(' + (75 + (value / 4)) + '%)';
     }
   };
