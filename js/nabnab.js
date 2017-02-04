@@ -11,12 +11,17 @@
 
   con.onmessage = function (e) {
     console.log(e.data);
-    if (e.data === 'isOpen' && !isOpen) {
+    var type = e.data.split(',')[0];
+    var value = Number(e.data.split(',')[1] || 0);
+    if (type === 'isOpen' && !isOpen) {
       isOpen = true;
       video.className = 'video active';
-    } else if (e.data === 'isClose' && isOpen) {
+    } else if (type === 'isClose' && isOpen) {
       isOpen = false;
       video.className = 'video deactive';
+    }
+    if (type === 'ambient' && isOpen && value < 100) {
+      video.style.filter = 'brightness(' + value + '%)';
     }
   };
 })();

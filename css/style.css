@@ -52,13 +52,13 @@ video {
 }
 
 .active {
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-name: fadein;
   filter: blur(0px) brightness(100%);
 }
 
 .deactive {
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-name: fadeout;
   filter: blur(0px) brightness(100%);
 }
