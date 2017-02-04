@@ -7,16 +7,25 @@
 	<title>website</title>
 	<link rel="stylesheet" type="text/css" href="./css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
-	<script type="text/javascript" src="./vendor/jquery.min.js"></script>
+	<!-- <script type="text/javascript" src="./vendor/jquery.min.js"></script> -->
+	<!-- <script src="http://jwpsrv.com/library/XXzG4ndHEeS3EA6sC0aurw.js"></script> -->
+	<link href="http://vjs.zencdn.net/5.16.0/video-js.css" rel="stylesheet">
 </head>
 <body>
 	<div class="windows">
 		<div class="windows-frame"></div>
 		<div class="windows-frame center"></div>
-		<div class="windows-frame"></div>
+		<div class="windows-frame panel">
+		</div>
 	</div>
-	<video autoplay loop poster="http://www.nxworld.net/codepen/css-fullscreen-background-video/img.jpg">
-		<source src="http://www.nxworld.net/codepen/css-fullscreen-background-video/movie.mp4" type="video/mp4">
+	<video id="my-video" class="video-js" preload="auto" width="1280" height="720"
+	poster="./images/loading.gif" data-setup="{}" autoplay >
+		<source src="rtmp://10.20.52.202/live/input" type='rtmp/mp4'>
+		<p class="vjs-no-js">
+			To view this video please enable JavaScript, and consider upgrading to a web browser that
+			<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+		</p>
 	</video>
+	<script src="http://vjs.zencdn.net/5.16.0/video.js"></script>
 </body>
 </html>

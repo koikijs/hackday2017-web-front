@@ -16,6 +16,10 @@
   border-right: 0px;
 }
 
+.windows-frame.panel{
+  background-color: #fff;
+}
+
 video {
 	position: fixed;
 	top: 0;
@@ -25,4 +29,15 @@ video {
 	width: auto;
 	height: auto;
 	z-index: -1;
+}
+
+#cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
 }
