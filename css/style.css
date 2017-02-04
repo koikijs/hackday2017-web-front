@@ -48,13 +48,40 @@ video {
   position: absolute;
   top: 0;
   left: 0;
-  transition-duration: 0.5s;
-  transition-property: filter;
-  filter: blur(5px) brightness(1000%);
+  filter: blur(0px) brightness(0%);
 }
 
 .active {
-  transition-duration: 0.5s;
-  transition-property: filter;
+  animation-duration: 3s;
+  animation-name: fadein;
   filter: blur(0px) brightness(100%);
+}
+
+.deactive {
+  animation-duration: 3s;
+  animation-name: fadeout;
+  filter: blur(0px) brightness(100%);
+}
+
+@keyframes fadein {
+  0% {
+    filter: blur(0px) brightness(0%);
+  }
+  30% {
+    filter: blur(5px) brightness(1000%);
+  }
+  100% {
+    filter: blur(0px) brightness(100%);
+  }
+}
+@keyframes fadeout {
+  0% {
+    filter: blur(0px) brightness(100%);
+  }
+  30% {
+    filter: blur(5px) brightness(1000%);
+  }
+  100% {
+    filter: blur(0px) brightness(0%);
+  }
 }

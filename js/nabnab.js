@@ -1,5 +1,5 @@
 (function() {
-  var con = new WebSocket('ws://10.20.52.198:8888');
+  var con = new WebSocket('ws://192.168.1.117:8888');
   var video = document.getElementsByClassName('video')[0];
   var isOpen = false;
   con.onopen = function() {
@@ -10,13 +10,13 @@
   };
 
   con.onmessage = function (e) {
-    var data = JSON.parse(e.data);
-    if (data.event === 'isOpen' && !isOpen) {
+    console.log(e.data);
+    if (e.data === 'isOpen' && !isOpen) {
       isOpen = true;
       video.className = 'video active';
-    } else if (data.event === 'isClose' && isOpen) {
+    } else if (e.data === 'isClose' && isOpen) {
       isOpen = false;
-      video.className = 'video';
+      video.className = 'video deactive';
     }
   };
 })();
